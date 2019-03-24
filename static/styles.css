@@ -1,0 +1,205 @@
+* {
+	font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+
+h1 {
+	font-family: "Helvetica Neue Light", Roboto, Helvetica, Arial, sans-serif;
+	font-size: 40px;
+	color: #51453B;
+	line-height: 30px;
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 25px;
+	color: #51453B;
+	line-height: 29px;
+}
+
+h3 {
+	font-size: 18px;
+	color: #4A4A4A;
+	line-height: 23px;
+}
+ p {
+ 	font-family: "Helvetica Neue", Roboto, Helvetica, Arial, sans-serif;
+ 	font-size: 16px;
+ 	color: #7B7573;
+ 	line-height: 24px;
+ 	font-weight: 400;
+ }
+
+ strong {
+ 	font-size: 16px;
+ 	color: #7B7573;
+ 	line-height: 24px;
+ }
+
+ a {
+ 	font-size: 14px;
+ 	color: #0093B9;
+ 	line-height: 17px;
+ }
+
+
+.padding-top {
+	padding-top: 30px;
+}
+.padding-bottom {
+	padding-bottom: 30px;
+}
+
+.margin-right {
+	margin-right: 30px;
+}
+
+.padding-none {
+	padding: 0;
+}
+
+.btn {
+	padding: 25px;
+	margin: 0;
+	border-color: #999999;
+	border-width: 2px;
+	color: orange;
+}
+.btn:hover {
+	border-color: #999999A;
+	background-color: white;
+	color: rgb(255,193,0);
+}
+
+.btn.delete {
+	border-color: #aaaaaa;
+	color: #aaaaaa;
+}
+
+.btn.delete:hover {
+	border-color: #aaaaaa;
+	color: orange;
+}
+
+.glyphicon {
+	margin-right: 10px;
+}
+.top-items {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.top-items p {
+	margin-bottom: 0;
+	line-height: 16px;
+}
+.top-items a {
+	margin-bottom: 0;
+	line-height: 16px;
+	font-size: 16px;
+	color: #7B7573;
+	font-weight: 400;
+}
+.divider {
+	height: 20px;
+}
+
+
+
+.divider.gray {
+	background-color:#999999;
+        
+}
+
+.banner.main {
+	height: 100px;
+	background: url("/static/top-banner.jpg");
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+
+.banner.item-list {
+	
+	background-color: orange;
+}
+
+.banner.profile {
+	height: 150px;
+	background-color: #A6E8EB;
+}
+
+.banner h1 {
+	margin: 45px 0;
+}
+
+.categorydesc{
+      background-color: orange;
+}
+
+.category-list {
+ 	background-color: #F0F0F0;
+ 	padding: 20px;
+}
+
+.category-list:hover {
+ 	background-color: #999999;
+ 	padding: 20px;
+}
+
+
+.item_list {
+	background-color: #F0F0F0;
+ 	padding: 20px;
+}
+
+.item_list:hover{
+	background-color: #999999;
+ 	padding: 20px;
+}
+
+.banner.item {
+        
+	background-color: orange;
+}
+
+.item {
+	background: #F0F0F0;
+	padding: 10px;
+	margin: 20px;
+	margin-left: -20px;
+}
+
+.item-price {
+	font-weight: 700;
+}
+
+.creator {
+	padding-right: 20px;
+	margin-top: -20px;
+	text-align: right;
+	
+}
+
+.creator img {
+	width: 140px;
+        max-width:100%;
+        height: auto;
+}
+
+
+
+.flash {
+	background-color:#ffd700;
+	width:100%;
+	text-decoration: none;
+	font-size: 15px;
+
+}
+
+.flash li {
+	list-style-type: none;
+	text-align: center;
+	font-style: italic;
+}

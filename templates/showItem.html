@@ -1,0 +1,37 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="row divider gray">
+<div class="col-md-12"></div>
+</div>
+
+<div class="categorydesc col-md-12">
+   <div class="banner">
+    <h1>{{category.name}} -- {{item.name}} </h1>
+   </div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"></div>
+     <div class="col-md-8">
+       <label for="name">Name:</label>
+       <input type ="text" maxlength="100" class="form-control" name="name" readonly value="{{item.name }}">
+
+       <label for="description">Description:</label>
+       <textarea class="form-control" maxlength="250" rows="3" name="description" readonly>{{item.description}}</textarea>
+
+	<label for="price">Price:</label>
+	<input type ="text" maxlength="10" class="form-control" name="price" readonly value="{{item.price}}">
+		
+             
+	<a href= '{{url_for('editItem', category_id = category.id , item_id=item.id) }}' class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">
+               Edit</a> 
+	<a href= '{{url_for('deleteItem', category_id = category.id, item_id=item.id) }}' class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">
+                Delete</a> 
+	<a href = '{{url_for('showItems',category_id= category.id)}}' class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">
+	       Go Back to Category</a>
+
+	    
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<!-- To divide between the banner and the content -->
+<div class= "row divider gray">
+   <div class="col-md-12"></div>
+</div>
+
+<div class="banner">
+  <div class="categorydesc col-md-8 text-left">
+
+	<h1>{{ category.name }} </h1>
+	<h3>{{category.description}}</h3>
+  </div>
+  <div class=" col-md-4 text-left">
+      {%if 'username' not in session %}
+        <figure class="creator">
+           <img src="{{ url_for('static', filename='blank_user.gif') }}">
+         </figure>
+       {% else %}
+   
+    <h3>Creator: {{creator.name}}</h3>
+    <br>
+<br>
+    <figure class="creator">
+    <img src={{creator.picture}}>
+    </figure>
+    
+{% endif %}
+</div>
+</div>
+
+	
+<div class = 'flash'>
+   {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+   {% endwith %}
+</div>
+
+<div class="row padding-top padding-bottom">
+   <div class="col-md-1"></div>
+   <div class="col-md-11 padding-none">
+      <a href="{{url_for('newItem', category_id = category.id )}}">
+	<button type="button" class="btn btn-outline-primary btn-lg" id="new-item">
+	  <span class="glyphicon glyphicon-plus"></span>Add Item
+	</button>
+      </a>
+	
+      
+   </div>
+   <div class="col-md-7"></div>
+</div>
+
+
+{% if items !=[] %}
+  
+  {% for i in items %}
+   <div class="col-md-1"></div> 
+   <div class="row">
+      
+      <div class="col-md-10 item_list">
+         <a href = "{{url_for('showItem',item_id = i.id)}}">
+	      <h3>{{i.name}}</h3>
+	      <br>
+         </a>
+     </div>
+    </div> 	   	
+            
+  {% endfor %}
+ 
+{% endif %}
+{% endblock %}
